@@ -1,0 +1,14 @@
+# Pull base image.
+FROM jlesage/baseimage-gui:debian-10
+
+# Install xterm.
+RUN add-pkg 4pane
+
+# Copy the start script.
+COPY startapp.sh /startapp.sh
+
+# Set environment variables.
+ENV APP_NAME="4pane"
+
+# Define mountable directories.
+VOLUME ["/config"]
