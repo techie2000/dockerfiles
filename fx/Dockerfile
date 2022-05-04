@@ -14,4 +14,4 @@ RUN go install github.com/antonmedv/fx@latest
 
 ## Our start command which kicks off
 ## our newly created binary executable
-CMD ["/app/main"]
+CMD ["fx"]
